@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #0f0524, #1e0343, #180218);
+    border-bottom: #30014e 1px solid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+nav h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.mobile_menu_icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.mobile_menu_icon span {
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.mobile_menu_icon.open span.mobile_menu_icon_top {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.mobile_menu_icon.open span.mobile_menu_icon_middle {
+    opacity: 0;
+}
+
+.mobile_menu_icon.open span.mobile_menu_icon_bottom {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+ul li a {
+    color: #dec7c7;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: rgba(171, 22, 22, 0.5);
+}
+
+/* Slant Section Styles */
+.slant {
+    background: linear-gradient(90deg, #04000d, #1d0146, #05020a);
+    clip-path: polygon(100% 0%, 100% 94%, 33% 62%, 0 79%, 0% 50%, 0 0);
+    width: 100%;
+    height: 100vh;
+    transition: 0.7s;
+    z-index: -1;
+}
+
+/* Caption Section Styles */
+.caption_section {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    margin-top: 60px;
+}
+
+.caption_section h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+
+.caption_section h2 {
+    color: #c5c5c5;
+    font-size: 60px;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.caption_section button {
+    display: inline-block;
+    background-color: #9000ff;
+    color: antiquewhite;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.caption_section button:hover {
+    opacity: 0.8;
+}
+
+/* Main Section Styles */
+.main_section {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main_section div {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.main_section div h1 {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: #2d012d;
+}
+
+.main_section div h2 {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #2d012d;
+}
+
+.main_section div h3 {
+    font-size: 1.5em;
+    color: #3b0366;
+    margin-top: 20px;
+}
+
+.main_section div h3 span {
+    color: #04000d;
+    text-decoration: line-through;
+}
+
+.main_section div p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #24014b;
+}
+
+.main_section div img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Product Services Section Styles */
+.product_services {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+}
+
+.product_services div {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product_services div img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product_services div h4 {
+    font-size: 1.5em;
+    color: #646464;
+}
+
+.product_services div p {
+    font-size: 1.2em;
+    color: #646464;
+}
+
+.product_services div button {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #04000d;
+    color: #42028a;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.product_services div button:hover {
+    background-color: #04000d;
+    color: #fff;
+}
+
+/* Other Products Section Styles */
+.suggested_products_header {
+    text-align: center;
+    margin: 60px 0;
+    font-size: 2.4em;
+    color: #3f3f3f;
+}
+
+.other_products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.other_products div {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+}
+
+.other_products div img {
+    max-width: 100%;
+    height: auto;
+}
+
+.other_products div h4 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #5f5f5f;
+}
+
+/* Footer Styles */
+footer {
+    padding: 40px 0;
+    background-color: #100218;
+    text-align: center;
+    color: #b8a8ca;
+}
+
+footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+footer a {
+    display: block;
+    color: #a7e7a7;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+
+@media (max-width: 700px) {
+    .mobile_menu_icon {
+        display: flex;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #0c0120;
+    }
+
+    ul.open {
+        display: flex;
+    }
+
+    ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
